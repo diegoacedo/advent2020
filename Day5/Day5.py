@@ -14,7 +14,7 @@ passports = data.values.tolist()
 
 passports = [passports[i][0] for i in range(0,len(passports))] #row
 
-passports2 = [passports[i][0][7:10] for i in range(0,len(passports))] #column
+#passports2 = [passports[i][0][7:10] for i in range(0,len(passports))] #column
 
 
 longrow = 2**7
@@ -38,7 +38,7 @@ for i in range(0,len(passports)):
         else:
             intervalrmin = intervalrmin + (intervalrmax - intervalrmin)/2
             
-    if passports1[i][6] == 'F': rowlist.append(intervalrmin)
+    if passports[i][6] == 'F': rowlist.append(intervalrmin)
     else: rowlist.append(intervalrmax-1)
     
     for j in range(7,9):
@@ -56,7 +56,10 @@ print(max(idlist))
 
 #Actividad 2
 
-for i in range(0, len(idlist)):
-    for j in range(i+1, len(idlist)):
-        if idlist[i]-idlist[j]==2:
-            print(i,j)
+idlist.sort()
+
+for i in range(0,len(idlist)-1):
+    if idlist[i+1] != idlist[i]+1:
+        print(idlist[i]+1)
+
+
