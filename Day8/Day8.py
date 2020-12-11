@@ -7,6 +7,7 @@ Created on Thu Dec 10 13:41:21 2020
 """
 
 import pandas as pd
+import copy
 
 data = pd.read_csv('inputday8.txt', header=None)
 
