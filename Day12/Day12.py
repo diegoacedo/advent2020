@@ -73,9 +73,6 @@ north = 0
 weast  = 10
 wnorth = 1
 
-#Matamos un par de moscas a cañonazos
-
-
 def turnleft(e,n,ndeg):
     if ndeg == 90:
         return -n,e
